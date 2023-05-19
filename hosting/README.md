@@ -1,0 +1,2 @@
+# Hosting
+Documentation about hosting
