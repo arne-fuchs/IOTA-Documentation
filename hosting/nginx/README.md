@@ -10,6 +10,13 @@ Nginx's configuration file to encrypt traffic for the hornet dashboard, api and 
 
 ## Cheat sheet
 
-```sudo nginx -t``` to check if config files has been written correctly
+Check if config files has been written correctly:
+```bash
+sudo nginx -t
+```
 
-```sudo nginx -s reload``` to apply changes
+Apply changes:
+```bash
+sudo nginx -s reload
+``` 
+
