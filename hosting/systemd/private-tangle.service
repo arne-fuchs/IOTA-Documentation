@@ -1,0 +1,17 @@
+[Unit]
+Description=Private Tangle Service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+ExecStartPre=-/bin/sleep 10
+Type=simple
+Restart=on-failure
+RestartSec=1
+User=root
+ExecStartPre=/usr/bin/docker-compose down
+ExecStart=/home/debian/hornet/private_tangle/run.sh 3
+WorkingDirectory=/home/debian/hornet/private_tangle
+
+[Install]
+WantedBy=default.target
