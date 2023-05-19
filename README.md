@@ -1,5 +1,5 @@
 # IOTA-Documentation
-Frank's IOTA / Shimmer Documentation
+Community IOTA / Shimmer Documentation
 
 ## Why another documentation?
 
