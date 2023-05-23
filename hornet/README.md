@@ -8,7 +8,7 @@ Clone
 git clone https://github.com/iotaledger/inx-dashboard.git
 ```
 
-From the root directory of the repo and call 
+Go to the root directory of the repo and call 
 ```bash
 ./scripts/build.sh
 ```
