@@ -2,6 +2,19 @@
 
 ## Building inx-dashboard
 
+Clone
+
+```bash 
+    git clone https://github.com/iotaledger/inx-dashboard.git
+```
+
+From the root directory of the repo and call 
+```bash
+./scripts/build.sh
+```
+
+**Or** if that doesn't work because of missing dependencies etc do following steps: 
+
 1. ```bash 
     git clone https://github.com/iotaledger/inx-dashboard.git
    ```
