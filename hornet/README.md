@@ -1,5 +1,7 @@
 # Hornet
 
+# <a href=https://github.com/iotaledger/inx-coordinator> inx-coordinator</a>
+
 ## Building inx-coordinator
 
 ```bash
@@ -14,7 +16,7 @@ cd inx-coordinator
 ./scripts/build.sh
 ```
 
-# inx-dashboard
+# <a href=https://github.com/iotaledger/inx-dashboard>inx-dashboard</a>
 
 ## Building inx-dashboard
 
