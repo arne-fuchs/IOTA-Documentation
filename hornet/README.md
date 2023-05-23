@@ -5,7 +5,7 @@
 Clone
 
 ```bash 
-    git clone https://github.com/iotaledger/inx-dashboard.git
+git clone https://github.com/iotaledger/inx-dashboard.git
 ```
 
 From the root directory of the repo and call 
