@@ -1,5 +1,19 @@
 # Hornet
 
+## Building inx-coordinator
+
+```bash
+git clone https://github.com/iotaledger/inx-coordinator
+```
+
+```bash
+cd inx-coordinator
+```
+
+```bash
+./scripts/build.sh
+```
+
 ## Building inx-dashboard
 
 Clone
