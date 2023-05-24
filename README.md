@@ -5,12 +5,12 @@ Community IOTA / Shimmer Documentation
 
 ## Table of Contents
 
-- [Building a private tangle](private_tangle/README.md)
-- [Hornet](hornet/README.md)
-    - [Setting the dashboard password](hornet/README.md)
-- [Hosting](hosting/README.md)
-    - [Nginx](hosting/nginx/README.md)
-    - [Systemd](hosting/systemd/README.md)
+- [Building a private tangle](private_tangle)
+- [Hornet](hornet)
+    - [Setting the dashboard password](hornet)
+- [Hosting](hosting)
+    - [Nginx](hosting/nginx)
+    - [Systemd](hosting/systemd)
 - [Contribute](#contribute)
 
 <!-- ABOUT THE PROJECT -->
