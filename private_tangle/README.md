@@ -72,7 +72,7 @@ mkdir shimmer && mkdir shimmer/database && mkdir shimmer/snapshots
 After that, with this command we create the genesis binary:
 
 ```bash
-./hornet tools snap-gen --protocolParametersPath private_tangle/protocol_parameters.json --mintAddress smr1qpzdgq78ju8z7php2q6pysem6hfmtrfmhnlvd4wr4c2re0j5js7zjquskjv --outputPath shimmer/snapshots/genesis_snapshot.bin
+./hornet tools snap-gen --protocolParametersPath private_tangle/protocol_parameters.json --mintAddress frank1qpjp7hsfk06rgpxn5rgv8ga0dl0n4ln20tjn6t5y73dzxp32vpakw5f5ger --outputPath shimmer/snapshots/genesis_snapshot.bin
 ```
 
 Note, that we provide the path to the protocol_parameters.json, where we defined the rules for our private tangle and the address we generated the step before.
