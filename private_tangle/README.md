@@ -228,6 +228,26 @@ In my case it looks like this:
 ]
 ```
 
+While we are there we set the targetNetworkName to the one defined in the protocol_parameters.json:
+```json
+"protocol": {
+    "targetNetworkName": "frank_tangle",
+    "milestonePublicKeyCount": 7,
+    "baseToken": {
+```
+
+and enable inx at the end of the configuration file:
+
+```json
+  "inx": {
+    "enabled": true,
+    "bindAddress": "localhost:9029",
+    "pow": {
+      "workerCount": 0
+    }
+  },
+```
+
 We now create the initial coordinator state by executing this command:
 
 ```bash
@@ -235,14 +255,6 @@ We now create the initial coordinator state by executing this command:
 ```
 
 We now have a coordinator.state file and an initial database in shimmer/database
-
-## Configure the config
-
-We now edit the config file, so it can be used by the nodes too. So here is a list of things you need to do:
-
-* You've already inserted the public key ranges. If not, you need to do that
-* Enable inx by setting enable to true. It is at the end of the config file. This is needed so the coordinator can talk to the node
-* Set target network name to your network name from the protocol_parameters.json
 
 ## Setting up the coordinator
 
