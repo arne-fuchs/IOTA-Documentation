@@ -1,0 +1,263 @@
+{
+  "app": {
+    "checkForUpdates": true,
+    "shutdown": {
+      "stopGracePeriod": "5m",
+      "log": {
+        "enabled": true,
+        "filePath": "shutdown.log"
+      }
+    }
+  },
+  "logger": {
+    "level": "info",
+    "disableCaller": true,
+    "disableStacktrace": false,
+    "stacktraceLevel": "panic",
+    "encoding": "console",
+    "encodingConfig": {
+      "timeEncoder": "rfc3339"
+    },
+    "outputPaths": [
+      "stdout"
+    ],
+    "disableEvents": true
+  },
+  "node": {
+    "profile": "auto",
+    "alias": "HORNET node"
+  },
+  "protocol": {
+    "targetNetworkName": "frank_tangle",
+    "milestonePublicKeyCount": 7,
+    "baseToken": {
+      "name": "Shimmer",
+      "tickerSymbol": "SMR",
+      "unit": "SMR",
+      "subunit": "glow",
+      "decimals": 6,
+      "useMetricPrefix": false
+    },
+    "publicKeyRanges": [
+  {
+    "key": "e28418dad96cd5645e9a683ab1a3c7af38c18e2e42e2c353c87326f0beb85ccd",
+    "start": 0,
+    "end": 0
+  },
+  {
+    "key": "9503b9aafe6f9b5c5ed0a3af3972e47ca477325f68091822cf0d0546f199187b",
+    "start": 0,
+    "end": 0
+  },
+  {
+    "key": "cd7c1a031b0110e480a17f52dc5e22555a8648c7bc6114b0374256f6e2333345",
+    "start": 0,
+    "end": 0
+  },
+  {
+    "key": "7da8a4319bec0a2bc7a7df9e4bdd48c3ec1ac373d694b789631fa48dcc7bbecc",
+    "start": 0,
+    "end": 0
+  },
+  {
+    "key": "2df4a3fdf8d6d02bad05f792f57d1bca8a3c7a8ebabc5948695087359f2b659a",
+    "start": 0,
+    "end": 0
+  },
+  {
+    "key": "6a792615891c3c3223052a4b48dde4324e6c38827e10cfe0a22f3a67bc598b6a",
+    "start": 0,
+    "end": 0
+  },
+  {
+    "key": "d11a223f38de24aa850a9be47252fec24e5f4f3c5be82dd7c17c898a58fab58d",
+    "start": 0,
+    "end": 0
+  }
+]
+  },
+  "db": {
+    "engine": "rocksdb",
+    "path": "shimmer/database",
+    "autoRevalidation": false,
+    "checkLedgerStateOnStartup": false
+  },
+  "pow": {
+    "refreshTipsInterval": "5s"
+  },
+  "p2p": {
+    "bindMultiAddresses": [
+      "/ip4/0.0.0.0/tcp/15600",
+      "/ip6/::/tcp/15600"
+    ],
+    "connectionManager": {
+      "highWatermark": 10,
+      "lowWatermark": 5
+    },
+    "identityPrivateKey": "",
+    "db": {
+      "path": "shimmer/p2pstore"
+    },
+    "reconnectInterval": "30s",
+    "gossip": {
+      "unknownPeersLimit": 4,
+      "streamReadTimeout": "1m",
+      "streamWriteTimeout": "10s"
+    },
+    "autopeering": {
+      "enabled": false,
+      "bindAddress": "0.0.0.0:14626",
+      "entryNodes": [
+        "/dns/entry-hornet-0.h.shimmer.network/udp/14626/autopeering/HK6EKbNtjwve9HMbL6PH6R3uLXZYQoBoqNPD5LsoWuA6",
+        "/dns/entry-hornet-1.h.shimmer.network/udp/14626/autopeering/BT8EiSRXTixnH2wMoy4ecNpVtiAXxfXKfYsJ2KvU3WLx"
+      ],
+      "entryNodesPreferIPv6": false,
+      "runAsEntryNode": false
+    }
+  },
+  "requests": {
+    "discardOlderThan": "15s",
+    "pendingReEnqueueInterval": "5s"
+  },
+  "tangle": {
+    "milestoneTimeout": "30s",
+    "maxDeltaBlockYoungestConeRootIndexToCMI": 8,
+    "maxDeltaBlockOldestConeRootIndexToCMI": 13,
+    "whiteFlagParentsSolidTimeout": "2s"
+  },
+  "snapshots": {
+    "enabled": false,
+    "depth": 50,
+    "interval": 200,
+    "fullPath": "shimmer/snapshots/full_snapshot.bin",
+    "deltaPath": "shimmer/snapshots/delta_snapshot.bin",
+    "deltaSizeThresholdPercentage": 50,
+    "deltaSizeThresholdMinSize": "50M",
+    "downloadURLs": [
+      {
+        "full": "https://files.shimmer.network/snapshots/latest-full_snapshot.bin",
+        "delta": "https://files.shimmer.network/snapshots/latest-delta_snapshot.bin"
+      }
+    ]
+  },
+  "pruning": {
+    "milestones": {
+      "enabled": false,
+      "maxMilestonesToKeep": 60480
+    },
+    "size": {
+      "enabled": true,
+      "targetSize": "30GB",
+      "thresholdPercentage": 10,
+      "cooldownTime": "5m"
+    },
+    "pruneReceipts": false
+  },
+  "profiling": {
+    "enabled": false,
+    "bindAddress": "localhost:6060"
+  },
+  "restAPI": {
+    "enabled": true,
+    "bindAddress": "0.0.0.0:14265",
+    "publicRoutes": [
+      "/health",
+      "/api/routes",
+      "/api/core/v2/info",
+      "/api/core/v2/tips",
+      "/api/core/v2/blocks*",
+      "/api/core/v2/transactions*",
+      "/api/core/v2/milestones*",
+      "/api/core/v2/outputs*",
+      "/api/core/v2/treasury",
+      "/api/core/v2/receipts*",
+      "/api/debug/v1/*",
+      "/api/indexer/v1/*",
+      "/api/mqtt/v1",
+      "/api/participation/v1/events*",
+      "/api/participation/v1/outputs*",
+      "/api/participation/v1/addresses*"
+    ],
+    "protectedRoutes": [
+      "/api/*"
+    ],
+    "debugRequestLoggerEnabled": false,
+    "jwtAuth": {
+      "salt": "HORNET"
+    },
+    "pow": {
+      "enabled": false,
+      "workerCount": 1
+    },
+    "limits": {
+      "maxBodyLength": "1M",
+      "maxResults": 1000
+    }
+  },
+  "warpsync": {
+    "enabled": true,
+    "advancementRange": 150
+  },
+  "tipsel": {
+    "enabled": true,
+    "nonLazy": {
+      "retentionRulesTipsLimit": 100,
+      "maxReferencedTipAge": "3s",
+      "maxChildren": 30
+    },
+    "semiLazy": {
+      "retentionRulesTipsLimit": 20,
+      "maxReferencedTipAge": "3s",
+      "maxChildren": 2
+    }
+  },
+  "receipts": {
+    "enabled": false,
+    "backup": {
+      "enabled": false,
+      "path": "receipts"
+    },
+    "validator": {
+      "validate": false,
+      "ignoreSoftErrors": false,
+      "api": {
+        "address": "http://localhost:14266",
+        "timeout": "5s"
+      },
+      "coordinator": {
+        "address": "UDYXTZBE9GZGPM9SSQV9LTZNDLJIZMPUVVXYXFYVBLIEUHLSEWFTKZZLXYRHHWVQV9MNNX9KZC9D9UZWZ",
+        "merkleTreeDepth": 24
+      }
+    }
+  },
+  "prometheus": {
+    "enabled": false,
+    "bindAddress": "localhost:9311",
+    "fileServiceDiscovery": {
+      "enabled": false,
+      "path": "target.json",
+      "target": "localhost:9311"
+    },
+    "databaseMetrics": true,
+    "nodeMetrics": true,
+    "gossipMetrics": true,
+    "cachesMetrics": true,
+    "restAPIMetrics": true,
+    "inxMetrics": true,
+    "migrationMetrics": true,
+    "debugMetrics": false,
+    "goMetrics": false,
+    "processMetrics": false,
+    "promhttpMetrics": false
+  },
+  "inx": {
+    "enabled": true,
+    "bindAddress": "localhost:9029",
+    "pow": {
+      "workerCount": 0
+    }
+  },
+  "debug": {
+    "enabled": false
+  }
+}

@@ -1,7 +1,9 @@
 # Private Tangle
 
-At one point the IF removed the instructions to create a private tangle from ground up. Their intention is that everything should run in the mainnet and did remove the documentation therefore.
+At one point the IF removed the instructions to create a private tangle from ground up with an own generated genesis block. Their intention is that everything should run in the mainnet and did remove the documentation therefore.
 So here it is.
+
+You'll find my example config files from hornet in the repo. They are the results running the steps from this documentation.
 
 ### Cloning the repo and building hornet
 
