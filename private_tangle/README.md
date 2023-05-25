@@ -253,8 +253,7 @@ and enable inx at the end of the configuration file:
 We now create the initial coordinator state by executing this command:
 
 ```bash
-./hornet tools bootstrap-private-tangle --snapshotPath=shimmer/snapshots/genesis_snapshot.bin --cooStatePath=coordinator.state --configFile=config.json --databasePath=shimmer/database
-```
+./hornet tools bootstrap-private-tangle --snapshotPath shimmer/snapshots/genesis_snapshot.bin --cooStatePath coordinator.state --configFile config.json --databasePath shimmer/database```
 
 We now have a coordinator.state file and an initial database in shimmer/database
 
