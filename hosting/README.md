@@ -15,3 +15,12 @@ Documentation about hosting.
 | ```1883```  | TCP      | <a href=https://github.com/iotaledger/inx-mqtt>MQTT</a>             | No        |
 
 Please keep in mind, that some ports are inx-plugins and might need some additional configuration.
+
+## Wasp 
+
+### Ports
+
+| Port        | Protocol | Description         |
+|-------------|----------|---------------------|
+| ```4000```  | TCP/UDP  | Wasp gossip         |
+| ```14265``` | TCP      | Wasp nanomsg events |
